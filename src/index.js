@@ -1,18 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Route, Switch } from "react-router-dom";
-
-import AdminLayout from "layouts/Admin.js";
+import App2 from './K/App';
 
 ReactDOM.render(
-    <BrowserRouter>
-        <Switch>
-          <Route path="/reactNewbie"  render={(props) => <AdminLayout {...props} />}/>
-        </Switch>
-      </BrowserRouter>,
+  <React.StrictMode>
+    <App2 />
+  </React.StrictMode>,
   document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
