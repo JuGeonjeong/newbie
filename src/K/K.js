@@ -1,9 +1,5 @@
 function App2({ history }) {
-  return (
-    <>
-      재현
-    </>
-  );
+  return <div>git branch 생성</div>;
 }
 
 export default App2;
