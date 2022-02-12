@@ -1,7 +1,8 @@
 function App2({ history }) {
   return (
     <>
-      재현
+      <div>git branch 생성</div>
+      <div>commit 실헝</div>
     </>
   );
 }
