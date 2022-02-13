@@ -1,17 +1,30 @@
-function App2({ history }) {
-  const name = '리액트';
-  const number = 0;
+import { Component } from 'react';
+import Mycomponent from './component/Mycomponent';
+import Counter from './component/Counter';
+import Say from './component/Say';
 
-  return (
-    <>
-      <div>git branch 생성</div>
-      <div>commit 실헝</div>
-      <div>{number && <h1>{name}</h1>}</div>
-      //ㅇㄴㄹㅁㄴㅇㄹㅁㄴㅁㄹㄹㅁㄹ
-      <input></input>
-    </>
-  );
+//클래스형
+class App2 extends Component {
+  const = '리액트';
+  render() {
+    return <Say></Say>;
+  }
 }
+
+// function App2({ history }) {
+//   const name = '리액트';
+//   const number = 0;
+
+//   return (
+//     <>
+//       <div>git branch 생성</div>
+//       <div>commit 실헝</div>
+//       <div>{number && <h1>{name}</h1>}</div>
+//       //ㅇㄴㄹㅁㄴㅇㄹㅁㄴㅁㄹㄹㅁㄹ
+//       <input></input>
+//     </>
+//   );
+// }
 
 export default App2;
 // //JSX 지켜야할 요소
