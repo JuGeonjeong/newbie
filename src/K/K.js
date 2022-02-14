@@ -1,13 +1,13 @@
-import { Component } from 'react';
-import Mycomponent from './component/Mycomponent';
-import Counter from './component/Counter';
-import Say from './component/Say';
+import { Component } from "react";
+import Mycomponent from "./component/Mycomponent";
+import Counter from "./component/Counter";
+import Say from "./component/Say";
+import FEventPractice from "./component/FEventPractice";
 
-//클래스형
 class App2 extends Component {
-  const = '리액트';
+  const = "리액트";
   render() {
-    return <Say></Say>;
+    return <FEventPractice />;
   }
 }
 
