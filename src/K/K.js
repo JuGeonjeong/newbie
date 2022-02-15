@@ -3,11 +3,20 @@ import Mycomponent from "./component/Mycomponent";
 import Counter from "./component/Counter";
 import Say from "./component/Say";
 import FEventPractice from "./component/FEventPractice";
+import ValidationSample from "./component/ValidationSample";
+import RefSample from "./component/RefSample";
+import ScrollBox from "./component/ScrollBox";
 
 class App2 extends Component {
-  const = "리액트";
   render() {
-    return <FEventPractice />;
+    return (
+      <>
+        <ScrollBox ref={(ref) => (this.scrollbox = ref)} />
+        <button onClick={() => this.scrollbox.scrollToBottom()}>
+          맨밑으로
+        </button>
+      </>
+    );
   }
 }
 
