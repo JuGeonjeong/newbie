@@ -1,11 +1,11 @@
-import { useState } from "react";
+import { useState } from 'react';
 
 const FEventPractice = () => {
-  const { form, setForm } = useState({
-    usenme: "",
-    message: "",
+  const [form, setForm] = useState({
+    username: '',
+    message: '',
   });
-  const [username, message] = form;
+  const { username, message } = form;
   const onChange = (e) => {
     const nextForm = {
       ...form, //기존의 form 내용을 이자리에 복사한 뒤
@@ -15,14 +15,14 @@ const FEventPractice = () => {
   };
 
   const onClick = () => {
-    alert(username + " : " + message);
+    alert(username + ' : ' + message);
     setForm({
-      username: "",
-      message: "",
+      username: '',
+      message: '',
     });
   };
   const onKeyPress = (e) => {
-    if (e.key === "Enter") {
+    if (e.key === 'Enter') {
       onClick();
     }
   };
