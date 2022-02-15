@@ -1,9 +1,9 @@
 import { Component } from 'react';
-import Mycomponent from './component/Mycomponent';
-import Counter from './component/Counter';
-import Say from './component/Say';
+// import Mycomponent from './component/Mycomponent';
+// import Counter from './component/Counter';
+// import Say from './component/Say';
 import FEventPractice from './component/FEventPractice';
-import CEventPractice from './component/CEventPractice';
+// import CEventPractice from './component/CEventPractice';
 
 class App2 extends Component {
   const = '리액트';
@@ -19,7 +19,7 @@ class App2 extends Component {
 //   return (
 //     <>
 //       <div>git branch 생성</div>
-//       <div>commit 실헝</div>
+//       <div>commit 실험</div>
 //       <div>{number && <h1>{name}</h1>}</div>
 //       //ㅇㄴㄹㅁㄴㅇㄹㅁㄴㅁㄹㄹㅁㄹ
 //       <input></input>
@@ -36,3 +36,5 @@ export default App2;
 // 3. var는 scope가 함수단위, let,const는 블록단위
 // 4. class가 아닌 className
 // 5. 태그를 꼭 닫아야 한다.
+
+// 생축요!!!
