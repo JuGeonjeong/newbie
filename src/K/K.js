@@ -9,6 +9,9 @@ import ScrollBox from "./component/ScrollBox";
 
 class App2 extends Component {
   render() {
+    const numbers = [1, 2, 3, 4, 5];
+    let processed = numbers.map((num) => num * num);
+    console.log(processed);
     return (
       <>
         <ScrollBox ref={(ref) => (this.scrollbox = ref)} />
