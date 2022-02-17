@@ -6,6 +6,7 @@ import FEventPractice from "./component/FEventPractice";
 import ValidationSample from "./component/ValidationSample";
 import RefSample from "./component/RefSample";
 import ScrollBox from "./component/ScrollBox";
+import IterationSample from "./component/IterationSample";
 
 class App2 extends Component {
   render() {
@@ -18,6 +19,7 @@ class App2 extends Component {
         <button onClick={() => this.scrollbox.scrollToBottom()}>
           맨밑으로
         </button>
+        <IterationSample></IterationSample>
       </>
     );
   }
