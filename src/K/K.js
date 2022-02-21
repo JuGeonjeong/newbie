@@ -1,25 +1,30 @@
-import { Component } from "react";
-import Mycomponent from "./component/Mycomponent";
-import Counter from "./component/Counter";
-import Say from "./component/Say";
-import FEventPractice from "./component/FEventPractice";
-import ValidationSample from "./component/ValidationSample";
-import RefSample from "./component/RefSample";
-import ScrollBox from "./component/ScrollBox";
-import IterationSample from "./component/IterationSample";
+import { Component } from 'react';
+import ErrorBoundary from './component/ErrorBoundary';
+import LifeCycleSample from './component/LifeCycleSample';
+
+function getRandomColor() {
+  return '#' + Math.floor(Math.random() * 16777215).toString(16);
+}
 
 class App2 extends Component {
+  state = {
+    color: '#00000',
+  };
+
+  handleClick = () => {
+    this.setState({
+      color: getRandomColor(),
+    });
+  };
   render() {
-    const numbers = [1, 2, 3, 4, 5];
-    let processed = numbers.map((num) => num * num);
-    console.log(processed);
     return (
       <>
-        <ScrollBox ref={(ref) => (this.scrollbox = ref)} />
-        <button onClick={() => this.scrollbox.scrollToBottom()}>
-          맨밑으로
-        </button>
-        <IterationSample></IterationSample>
+        <div>
+          <button onClick={this.handleClick}>랜덤색상</button>
+          <ErrorBoundary>
+            <LifeCycleSample color={this.state.color} />
+          </ErrorBoundary>
+        </div>
       </>
     );
   }
