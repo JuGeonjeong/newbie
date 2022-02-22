@@ -1,50 +1,33 @@
+import { useState } from 'react';
 import { Component } from 'react';
 import ErrorBoundary from './component/ErrorBoundary';
 import LifeCycleSample from './component/LifeCycleSample';
+import FCounter from './hooks/FCounter';
+import Info from './hooks/info';
+// class App2 extends Component {
 
-function getRandomColor() {
-  return '#' + Math.floor(Math.random() * 16777215).toString(16);
-}
+//   render() {
+//     return (
 
-class App2 extends Component {
-  state = {
-    color: '#00000',
-  };
-
-  handleClick = () => {
-    this.setState({
-      color: getRandomColor(),
-    });
-  };
-  render() {
-    return (
-      <>
-        <div>
-          <button onClick={this.handleClick}>랜덤색상</button>
-          <ErrorBoundary>
-            <LifeCycleSample color={this.state.color} />
-          </ErrorBoundary>
-        </div>
-      </>
-    );
-  }
-}
-export default App2;
-// function App2({ history }) {
-//   const name = '리액트';
-//   const number = 0;
-
-//   return (
-//     <>
-//       <div>git branch 생성</div>
-//       <div>commit 실험</div>
-//       <div>{number && <h1>{name}</h1>}</div>
-//       //ㅇㄴㄹㅁㄴㅇㄹㅁㄴㅁㄹㄹㅁㄹ
-//       <input></input>
-//     </>
-//   );
+//     );
+//   }
 // }
-
+const App2 = () => {
+  const [visible, setVisible] = useState(false);
+  return (
+    <div>
+      <button
+        onClick={() => {
+          setVisible(!visible);
+        }}
+      >
+        {visible ? '숨기기' : '보이기'}
+      </button>
+      {visible && <Info />}
+    </div>
+  );
+};
+export default App2;
 // //JSX 지켜야할 요소
 // 1. 부모 요소 하나로 감싸야한다.
 // --> 감싸는 이유 DOM에서 컴포넌트 변화를 감지해 낼때 효율적인 비교를 위해
